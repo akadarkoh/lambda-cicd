@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    # paths:
-    #   - 'lambda/**'
+    paths:
+      - 'lambda-cicd/**'
 
 env:
   ACTIONS_STEP_DEBUG: true

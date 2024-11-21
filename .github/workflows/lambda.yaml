@@ -4,8 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'lambda/**'
+    # paths:
+    #   - 'lambda/**'
+
+env:
+  ACTIONS_STEP_DEBUG: true
 
 jobs:       # Jobs to run inside workflow
   deploy-lambda:          # Name of the job

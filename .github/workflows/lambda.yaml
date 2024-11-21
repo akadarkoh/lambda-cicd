@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - 'lambda/'
+      - 'lambda/**'
 
 jobs:       #jobs to run inside workflow
   deploy-lambda:          #name of our job

@@ -17,7 +17,7 @@ jobs:       # Jobs to run inside workflow
       - uses: actions/checkout@v3
 
       - name: Set Up Python   # Sets up Python environment
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
           python-version: '3.12'
 
@@ -32,6 +32,9 @@ jobs:       # Jobs to run inside workflow
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
+
+      - name: Validate AWS credentials
+        run: aws sts get-caller-identity
 
       - name: Deploy Lambda Function    # Zips lambda directory and updates the function
         run: |

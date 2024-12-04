@@ -17,7 +17,7 @@ jobs:       # Jobs to run inside workflow
       - uses: actions/checkout@v3
 
       - name: Set Up Python   # Sets up Python environment
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
